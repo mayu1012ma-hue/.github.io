@@ -86,19 +86,6 @@ p {
 
 /* ----------------------------------------------- カールセル */
 
-.carousel-item{
-  height: 32rem;
-}
-
-.carousel-item > img{
-  /* 絶対位置を指定 */
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-
-  height: 32rem;
-}
 
 .my_carousel_caption{
   font-size: 52px;
@@ -123,7 +110,17 @@ p {
   }
 }
 
+.carousel-item {
+height: 32rem;
+}
 
+.carousel-item>img {
+position: absolute;
+top: 0;
+left: 0;
+min-width: 100%;
+height: 32rem;
+}
 
 /* ----------------------------------------------- アバウト */
 
@@ -239,37 +236,6 @@ p {
   background-color: #FAFAFA;
 }
 
-/* restaurant_info直下の子要素pタグ全てに適用される */
-.restaurant_info p {
-  font-weight: 400;
-  line-height: 1.5;
-  font-size: 16px;
-}
-
-/* restaurant_info直下の子要素imgタグ全てに適用される */
-.restaurant_info img {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  line-height: 1.5;
-  margin-top: auto;
-}
-
-/* サイトアイコンを64pxに設定 */
-.footer_brand_logo {
-  width: 64px;
-  height: 64px;
-  display: inline-block;
-  /* 右側余白15px */
-  margin-right: 15px;
-}
-
-/* サイトタイトルのフォントをserif体（明朝体）に設定 */
-.footer_text {
-  font-size: 24px;
-  font-family: 'Lora', serif;
-}
-
 /* position:　absoluteで下からの距離で固定 */
 .copy_right {
   font-size: 14px;
@@ -301,8 +267,41 @@ p {
   margin-top: 0;
 }
 
+/* restaurant_info直下の子要素pタグ全てに適用される */
+.restaurant_info p {
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+/* restaurant_info直下の子要素imgタグ全てに適用される */
+.restaurant_info img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  line-height: 1.5;
+  margin-top: auto;
+}
+
+/* サイトアイコンを64pxに設定 */
+.footer_brand_logo {
+  width: 64px;
+  height: 64px;
+  display: inline-block;
+  /* 右側余白15px */
+  margin-right: 15px;
+}
+
+/* サイトタイトルのフォントをserif体（明朝体）に設定 */
+.footer_text {
+  font-size: 24px;
+  font-family: 'Lora', serif;
+}
+
+
+
 /* スマートフォン画面幅（最大991pxまで）でスタイルを適用 */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 991px) {
   .footer_text,
   .copy_right {
     margin-top: 2rem;
@@ -317,3 +316,21 @@ p {
     line-height: 35px;
   }
 }
+
+@media screen and (max-width: 375px) {
+.footer_text,	.footer_text,
+.copy_right {	.copy_right {
+margin-top: 2rem;	margin-top: 2rem;
+text-align: center;	text-align: center;
+position: relative;	position: relative;
+}	}
+
+.copy_right>p,img {	.copy_right>p,
+  img {
+margin-right: 1rem;	margin-right: 1rem;
+font-size: 14px;	font-size: 14px;
+margin: 0;	margin: 0;
+line-height: 35px;	line-height: 35px;
+}	}
+}	
+
